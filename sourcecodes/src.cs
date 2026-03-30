@@ -19,7 +19,7 @@ class skibiditoilet69
     private const uint PROCESS_DUP_HANDLE = 0x0040;
     private const uint DUPLICATE_CLOSE_SOURCE = 0x00000001;
     private const uint DUPLICATE_SAME_ACCESS = 0x00000002;
-    private const int MAX_CLIENTS = 9999; // set to 5 if you want only 5 clients running or higher/lower //
+    private const int MAX_CLIENTS = 9999;
 
     public enum PROCESSINFOCLASS { ProcessHandleInformation = 51 }
     public enum OBJECT_INFORMATION_CLASS { ObjectNameInformation = 1 }
