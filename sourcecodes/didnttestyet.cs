@@ -79,9 +79,9 @@ class iloveherguyssss
 
     static void Main()
     {
-        Console.Title = "RobloxMultiAlpha";
+        Console.Title = "RobloxOmegaAlpha.sh";
         Console.Clear();
-        Console.WriteLine("This tool is AGAINST Roblox's TOS!\nUse at your own risk.\n\nPress Enter to skip wait...");
+        Console.WriteLine("This tool is against Roblox's ToS.\nUse it at your own risk.\n");
 
         using var cts = new CancellationTokenSource();
         var waitTask = Task.Delay(45000, cts.Token);
@@ -93,6 +93,7 @@ class iloveherguyssss
         {
             _mutex = new Mutex(true, "ROBLOX_singletonMutex");
         }
+        
         catch
         {
             return;
@@ -142,8 +143,9 @@ class iloveherguyssss
             int lines;
             if (active.Length == 0)
             {
-                Console.WriteLine("RobloxPlayerBeta.exe not found. Make sure Roblox is running!");
-                lines = 1;
+                Console.WriteLine("RobloxPlayerBeta.exe not found.");
+                Console.WriteLine("Is yours roblox even running? Btw, ts might not work with roblox from microslop store");
+                lines = 2;
             }
             else
             {
