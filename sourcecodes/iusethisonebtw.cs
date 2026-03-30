@@ -85,7 +85,7 @@ class skibiditoilet69
         Console.WriteLine("This tool is AGAINIST Roblox's TOS!");
         Console.WriteLine("Use at your risk nga.");
         Console.WriteLine(" ");
-        var delayTask = Task.Delay(45000); // Stops for 45 seconds. Can be skipped //
+        var delayTask = Task.Delay(45000); // Stops for 45 seconds. Can be skip by pressing "Enter" Key on your lovely keyboard //
         var keyTask = Task.Run(() =>
         {
             ConsoleKeyInfo key;
