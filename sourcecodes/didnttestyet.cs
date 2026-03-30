@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-class RobloxMulti
+class iloveherguyssss
 {
     private static Timer? _timer;
     private static int _tableTop;
