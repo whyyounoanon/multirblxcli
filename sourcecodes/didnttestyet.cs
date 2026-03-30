@@ -143,19 +143,21 @@ class iloveherguyssss
             int lines;
             if (active.Length == 0)
             {
+                Console.Clear();
                 Console.WriteLine("RobloxPlayerBeta.exe not found.");
                 Console.WriteLine("Is yours roblox even running? Btw, ts might not work with roblox from microslop store");
                 lines = 2;
             }
+            
             else
             {
                 for (int i = 0; i < active.Length; i++)
                     Console.WriteLine($"{i + 1}: PID = {active[i].Id}");
-                lines = active.Length;
+                    lines = active.Length;
 
                 if (showMessage)
                 {
-                    Console.WriteLine("Max clients reached.");
+                    Console.WriteLine("You noob");
                     lines++;
                 }
             }
