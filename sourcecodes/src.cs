@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-class Program
+class skibiditoilet69
 {
     private static Timer? _timer;
     private static int _tableTop;
@@ -19,7 +19,7 @@ class Program
     private const uint PROCESS_DUP_HANDLE = 0x0040;
     private const uint DUPLICATE_CLOSE_SOURCE = 0x00000001;
     private const uint DUPLICATE_SAME_ACCESS = 0x00000002;
-    private const int MAX_CLIENTS = 9999;
+    private const int MAX_CLIENTS = 9999; // set to 5 if you want only 5 clients running or higher/lower //
 
     public enum PROCESSINFOCLASS { ProcessHandleInformation = 51 }
     public enum OBJECT_INFORMATION_CLASS { ObjectNameInformation = 1 }
@@ -80,10 +80,10 @@ class Program
 
     static void Main(string[] args)
     {
-        Console.Title = "RobloxPlayerAlpha.exe";
+        Console.Title = "RobloxMultiAlpha.rat";
         Console.Clear();
-        Console.WriteLine("Dear, Users. This Program was created and scripting by Kansxy.");
-        Console.WriteLine("Our Software is AGAINIST Roblox's TOS! Use at your risk!");
+        Console.WriteLine("This tool is AGAINIST Roblox's TOS!");
+        Console.WriteLine("Use at your risk nga.");
         Console.WriteLine(" ");
         var delayTask = Task.Delay(45000); // Stops for 45 seconds. Can be skipped //
         var keyTask = Task.Run(() =>
@@ -92,15 +92,21 @@ class Program
             do
             {
                 key = Console.ReadKey(true);
-            } while (key.Key != ConsoleKey.Enter);
+            }
+            
+            while (key.Key != ConsoleKey.Enter);
+            
         });
+        
         Task.WhenAny(delayTask, keyTask).Wait();
 
         _tableTop = Console.CursorTop;
         try
+            
         {
             _mutex = new Mutex(true, "ROBLOX_singletonMutex");
         }
+        
         catch
         {
             return
@@ -111,6 +117,8 @@ class Program
         {
             Thread.Sleep(1000);
         }
+    // catch something //
+        
     }
 
     static void UpdateDisplay(object? state)
@@ -124,7 +132,6 @@ class Program
 
             bool showMessage = false;
 
-            // limits clients //
             foreach (var p in procs)
             {
                 if (!knownPids.Contains(p.Id))
@@ -154,7 +161,7 @@ class Program
             int newLineCount = 0;
             if (displayProcs.Length == 0)
             {
-                Console.Clear(); // I just wants to makes sure that none of the "1,2,3,4,5" left-over
+                Console.Clear();
                 Console.WriteLine("RobloxPlayerBeta.exe Not Found. Make sure Roblox is running!!!");
                 newLineCount = 1;
             }
@@ -164,6 +171,7 @@ class Program
                 {
                     Console.WriteLine($"{i + 1}: PID = {displayProcs[i].Id}");
                 }
+                
                 newLineCount = displayProcs.Length;
 
                 if (showMessage)
