@@ -109,7 +109,7 @@ class skibiditoilet69
         
         catch
         {
-            return
+            return;
         }
 
         _timer = new Timer(UpdateDisplay, null, 0, 1000);
